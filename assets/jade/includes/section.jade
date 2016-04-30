@@ -1,0 +1,32 @@
+include ../mixins/mixins.jade
+section(class="gray-color")
+ img(class="center-box" src="images/logo.jpg")
+ h3(class="text-center")  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+ p(class="text-center")  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis libero cumque, ut, quo dolore.
+ div.container.border
+  div.row
+   div.col-md-9.col-sm-9.col-xs-12.col-title
+    h3  Lorem ipsum dolor sit amet, consectetur.
+    p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus!
+   div.col-md-3.col-sm-3.col-xs-12.col-photo
+    h4.text-center  November 1,2015
+    a.inline.text-muted JANE DOE
+    img(class="perfile pull-right" src="images/avatar.jpg")
+  div.row
+   div.col-md-12.col-sm-12.col-xs-12.col-bg
+    div.img-bg
+     img(src="images/pic01.jpg")
+    div.text-bg
+     p   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Natus sequi nisi exercitationem libero! Aut, numquam repellendus facilis accusamus amet est maiores reiciendis culpa unde, accusantium delectus itaque suscipit neque cupiditate? Rem dolore illo aspernatur ipsa assumenda vel, ratione illum soluta nemo ad eligendi similique magnam eius nesciunt, a aliquam tempore.
+    div.pull-left
+     +button("default reading", "success.html", "large") Continue Reading
+    div.pull-right
+     a(href="")
+      span GENERAL
+     a(href="")
+      span.fa.fa-heart GENERAL
+     a(href="")
+      span.fa.fa-heart GENERAL
+  div.row.v-center
+   +button("default reading", "success.html", "large") PREVIOUS PAGE
+   +button("default reading", "success.html", "large") NEXT PAGE

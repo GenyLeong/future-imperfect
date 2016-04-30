@@ -1,0 +1,107 @@
+@import "../vendor/stylesheets/bootstrap.scss";
+$gray-color:#F4F4F4;
+$gray-two-color:rgb(210, 210, 210);
+.v-center{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+@mixin border-radius($btl, $btr, $bbl, $bbr) {
+		border-top-left-radius: $btl;
+		border-top-right-radius: $btr;
+		border-bottom-left-radius: $bbl;
+		border-bottom-right-radius: $bbr;
+
+}
+
+@mixin margin($mt, $mr, $mb, $ml){
+	margin:{
+		top:$mt;
+		bottom:$mb;
+		right:$mr;
+		left:$ml;
+	}
+}
+
+@mixin padding($pt, $pr, $pb, $pl){
+	padding:{
+		top:$pt;
+		right:$pr;
+		bottom:$pb;
+		left:$pl;
+	}
+}
+
+#header_area{
+	height: 50px;
+}
+
+.navbar{
+	margin: 0px;
+}
+section.gray-color{
+	background-color: $gray-color;
+}
+
+.center-box{
+	@extend .v-center;
+	@include border-radius(15px, 15px, 15px, 15px);
+}
+
+.container{
+	background-color: $body-bg;
+}
+
+.border{
+	border:1px solid $gray-two-color;
+}
+
+.img-bg{
+	@extend .v-center;
+	@include margin(0px, 0px, 42px, 0px);
+	img{
+		width: 100%;
+	}
+}
+
+.col-title{
+	@include padding(0px, 5%, 0px, 5%);
+	border-bottom: 1px solid $gray-two-color;
+}
+
+.col-photo{
+	@extend .col-title;
+	border-left: 1px solid $gray-two-color;
+.perfile{
+	border-radius: 50%;
+	@include margin(0px, 0px, 11px, 0px);
+}
+}
+
+.col-bg{
+	@include padding(0px, 5%, 0px, 5%);
+	@include margin(42px, 0px, 42px, 0px);
+}
+
+.reading{
+	background-color: transparent;
+	border: 1px solid $gray-two-color;
+	border-radius: 0px;
+	color: gray;
+	@include margin(21px, 21px, 21px, 0px);
+	@include padding(14px, 42px, 14px, 42px);
+	font-size: 1.2rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	&:hover{
+		background-color: $gray-two-color;
+		color:white;
+		border:1px solid $gray-two-color;
+	}
+	&:active,
+	&.active{
+		background-color: $gray-two-color;
+		color:white;
+		border:1px solid $gray-two-color;		
+	}
+}
